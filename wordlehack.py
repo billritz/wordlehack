@@ -29,13 +29,13 @@ try:
             str(soup)[wordleListStart:wordleListStart+wordleListEnd].replace('"', '').split(","))
 
         wordleIndex = date.today() - wordleStartDate
-        wordle = wordleList[int(wordleIndex.days)+1]
+        wordle = wordleList[int(wordleIndex.days)]
 
     if wordle:
         print("Today's Wordle: {}".format(wordle))
     else:
-        print("Figure it out yourself.  The script is fucked.")
+        print("Something went wrong.")
 
 
 except:
-    print("Figure it out yourself.  The script is fucked.")
+    print("Something went wrong.")
